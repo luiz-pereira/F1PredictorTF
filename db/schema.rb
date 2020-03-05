@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_022739) do
+ActiveRecord::Schema.define(version: 2020_03_04_052934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_022739) do
     t.integer "num_races"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
   end
 
   create_table "drivers", force: :cascade do |t|
@@ -32,39 +33,43 @@ ActiveRecord::Schema.define(version: 2020_03_03_022739) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "number"
-    t.integer "races"
     t.integer "poles"
     t.integer "wins"
     t.integer "podiums"
     t.integer "fastest_laps"
     t.integer "championships"
+    t.string "url"
   end
 
   create_table "engines", force: :cascade do |t|
     t.string "engine"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
   end
 
   create_table "races", force: :cascade do |t|
     t.integer "circuit_id"
     t.string "weather"
-    t.date "race_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
+    t.string "name"
+    t.string "race_date"
   end
 
   create_table "results", force: :cascade do |t|
     t.integer "driver_id"
     t.integer "race_id"
-    t.integer "position_start"
-    t.integer "position_finish"
+    t.string "position_start"
+    t.string "position_finish"
     t.time "best_lap"
     t.time "total_time"
     t.integer "team_id"
     t.integer "engine_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "url"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -81,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_022739) do
     t.integer "fastest_laps"
     t.integer "driver_championships"
     t.integer "team_championships"
+    t.string "url"
   end
 
 end

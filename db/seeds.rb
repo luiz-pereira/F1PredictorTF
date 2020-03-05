@@ -1,10 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'pry'
 
+# Team.destroy_all
+# Driver.destroy_all
+Race.destroy_all
+Circuit.destroy_all
+Result.destroy_all
 
-Driver.destroy_all
+# ScrapeTeam.get_teams_list
+# ScrapeDriver.get_drivers_list
+ScrapeResult.get_results
