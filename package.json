@@ -1,15 +1,35 @@
 {
-  "name": "F1PredictorTF",
+  "name": "f1predictortf",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "@tensorflow/tfjs": "^1.6.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.10.3"
-  }
+  },
+  "description": "An exercise on Machine Learning for a F1 predictor",
+  "main": "babel.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiz-pereira/F1PredictorTF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiz-pereira/F1PredictorTF/issues"
+  },
+  "homepage": "https://github.com/luiz-pereira/F1PredictorTF#readme"
 }
